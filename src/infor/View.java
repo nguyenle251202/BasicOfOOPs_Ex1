@@ -5,6 +5,19 @@ import java.util.List;
 
 public class View {
 
+    public static List<Infor> getInitialStudentData() {
+
+        List<Infor> initialList = new ArrayList<>();
+
+        initialList.add(new Infor(null, "Nguyen Van A", 20, 3.85f));
+        initialList.add(new Infor(null, "Tran Van B", 22, 3.20f));
+        initialList.add(new Infor(null, "Ly Thi C", 19, 3.95f)); // Corrected name casing
+        initialList.add(new Infor(null, "Le Van D", 21, 3.50f));
+        initialList.add(new Infor(null, "Duong Van E", 20, 3.11f));
+        return initialList;
+    }
+
+    // Instance method to display any given list
     public void displayStudentList(List<Infor> studentList) {
         if (studentList == null || studentList.isEmpty()) {
             System.out.println("No student data to display.");
@@ -31,22 +44,6 @@ public class View {
                     student.getAge(),
                     student.getGpa());
         }
-
         System.out.format(separator);
-    }
-
-    public static void main(String[] args) {
-        List<Infor> students = new ArrayList<>();
-        students.add(new Infor(null, "Nguyen Van A", 20, 3.85f));
-        students.add(new Infor(null, "Tran Van B", 22, 3.20f));
-        students.add(new Infor(null, "Ly thi C", 19, 3.95f));
-        students.add(new Infor(null, "Le Van D", 21, 3.50f));
-        students.add(new Infor(null, "Duong Van E", 20, 3.11f));
-
-
-        View studentView = new View();
-
-        System.out.println("--- Student List ---");
-        studentView.displayStudentList(students);
     }
 }

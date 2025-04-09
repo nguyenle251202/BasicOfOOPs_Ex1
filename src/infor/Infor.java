@@ -12,7 +12,7 @@ public class Infor {
     private float gpa;
 
     public Infor(String id, String fullName, int age, float gpa) {
-        this.id = String.format("%03d", idCounter.getAndIncrement());
+        this.id = String.format("SV%03d", idCounter.getAndIncrement());
         this.fullName = fullName;
         this.age = age;
         this.gpa = gpa;
