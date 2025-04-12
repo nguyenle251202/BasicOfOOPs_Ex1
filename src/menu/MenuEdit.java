@@ -28,7 +28,7 @@ public class MenuEdit {
         boolean editing = true;
         while (editing) {
             System.out.println("\nEditing Student: " + studentToEdit);
-            displayEditOptions();
+                displayEditOptions();
             int editChoice = selectEditOption(scanner);
 
             switch (editChoice) {
